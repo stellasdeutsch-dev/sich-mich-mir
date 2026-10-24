@@ -438,6 +438,94 @@ footer{background:var(--soft);padding:34px 0 100px;font-size:13px;color:var(--mu
 .fg .btn{min-height:40px;font-size:13px;padding:0 14px}
 .fb{display:flex;justify-content:space-between;gap:10px;border-top:1px solid var(--grey);margin-top:26px;padding-top:16px;font-size:12px}
 
+
+/* marquee band */
+.band{position:relative;z-index:3;background:var(--blue);color:#fff;overflow:hidden;padding:14px 0;rotate:-1.6deg;margin:30px -10px 0;box-shadow:0 14px 30px -18px rgba(44,180,254,.9)}
+.track{display:flex;gap:18px;width:max-content;white-space:nowrap;font:600 20px/1 var(--f);text-transform:uppercase;letter-spacing:.02em;animation:mq 30s linear infinite}
+.track i{font-style:normal;opacity:.6}
+html.gs .track{animation:none}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* arrow vs boomerang */
+.bm{background:#fff;border-radius:18px;box-shadow:0 26px 60px -34px rgba(0,0,0,.4);padding:16px 14px 20px}
+.bm-stage{margin:12px 0 4px}
+.bm-stage svg{display:block;width:100%;height:auto}
+.bm-cap{text-align:center;min-height:70px}
+.bm-de{font-size:22px;font-weight:500;margin:6px 0 4px}
+.bm-de b{color:var(--blue)}
+.bm-ru{margin:0;color:var(--ink-2);font-size:15px}
+
+/* -ся vs sich */
+.sya{display:grid;gap:10px}
+.sy{display:grid;grid-template-columns:1fr 64px 1fr;align-items:center;gap:6px;background:#fff;border-radius:12px;padding:12px 12px;box-shadow:0 10px 26px -20px rgba(0,0,0,.5)}
+.sy .ru,.sy .dz{font-size:16px;font-weight:500}
+.sy .ru b,.sy .dz b{color:var(--blue)}
+.sy .dz{text-align:right}
+.sy .dz small,.sy .ru small{display:block;font-size:11.5px;color:var(--mute);font-weight:400}
+.sy svg{width:64px;height:24px;overflow:visible}
+.sy .l1,.sy .l2{stroke-width:3;stroke-linecap:round}
+.sy.k1 .l1,.sy.k1 .l2{stroke:var(--blue)}
+.sy.k0 .l1,.sy.k0 .l2{stroke:var(--red)}
+.sy.k2 .l1,.sy.k2 .l2{stroke:var(--star)}
+.sy .mk{font:700 13px var(--f)}
+
+/* seats */
+.seat-card{background:#fff;border-radius:18px;box-shadow:0 26px 60px -34px rgba(0,0,0,.4);padding:20px 14px 18px}
+.seat-sent{text-align:center;font-size:22px;font-weight:500;margin:0 0 14px;min-height:34px}
+.seat-sent b{color:var(--blue)}
+.seat-sent u{text-decoration:none;color:var(--ink);box-shadow:inset 0 -3px 0 var(--blue)}
+.seat-stage{position:relative;height:250px;border-radius:14px;background:var(--soft);overflow:hidden}
+.seat-q{position:absolute;left:10px;right:10px;top:10px;height:62px;border:1.5px dashed var(--grey);border-radius:12px}
+.seat-q span{position:absolute;right:10px;top:6px;font-size:11px;color:var(--faint);text-transform:uppercase;letter-spacing:.08em}
+.bench{position:absolute;left:10px;right:10px;bottom:12px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.seat{position:relative;height:120px;border-radius:16px 16px 10px 10px;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;padding-bottom:10px;color:#fff}
+.seat::before{content:"";position:absolute;left:8px;right:8px;bottom:36px;height:14px;border-radius:7px;background:rgba(255,255,255,.25)}
+.seat.a{background:var(--blue)}.seat.d{background:var(--ink)}
+.seat span{font-weight:600;font-size:15px}
+.seat small{font-size:11.5px;opacity:.8}
+.tok{position:absolute;left:0;top:0;z-index:3;display:inline-flex;align-items:center;gap:7px;padding:7px 12px 7px 7px;border-radius:30px;background:#fff;box-shadow:0 10px 22px -10px rgba(0,0,0,.45);font-size:16px;white-space:nowrap}
+.tok b{font-weight:600}
+.tok .fc{width:30px;height:30px;border-radius:50%;background:#efc29c;position:relative;flex:none;box-shadow:inset 0 9px 0 #2D2929}
+.tok .fc::after{content:"";position:absolute;left:8px;right:8px;top:15px;height:4px;border-radius:2px;background:radial-gradient(circle,#2D2929 2px,transparent 2.5px) 0 0/7px 4px repeat-x}
+.tok.obj{padding-left:12px}
+.tok.obj .ic{color:var(--blue);font-size:20px}
+.tok.me b{color:var(--blue)}
+html:not(.gs) .tok{transition:transform .6s cubic-bezier(.3,1.3,.4,1)}
+
+/* word order */
+.ord{background:#fff;border-radius:18px;box-shadow:0 26px 60px -34px rgba(0,0,0,.4);padding:14px 12px 18px}
+.ord-tabs{box-shadow:none;background:var(--soft);margin-bottom:14px}
+.ord-tabs button{min-width:96px;font-size:13.5px}
+.ord-stage{position:relative;min-height:170px;border-radius:14px;background:var(--soft);padding:62px 10px 18px}
+.ord-dock{position:absolute;left:12px;top:14px;font-size:12px;color:var(--faint);text-transform:uppercase;letter-spacing:.06em}
+.ord-chip{position:absolute;left:0;top:0;z-index:3;padding:8px 14px;border-radius:9px;background:var(--blue);color:#fff;font:600 18px/1.1 var(--f);box-shadow:0 10px 20px -10px rgba(44,180,254,1);white-space:nowrap}
+.ord-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center}
+.ow{padding:8px 12px;border-radius:9px;background:#fff;font-size:18px;font-weight:500;border:1.5px solid var(--line)}
+.ow.v{border-color:var(--blue);color:var(--blue-d)}
+.ow.p{color:var(--mute);border-style:dashed}
+.ow.slot{min-width:64px;height:40px;border:2px dashed var(--blue);background:var(--blue-l)}
+.ord-cap{display:flex;gap:12px;align-items:center;justify-content:center;margin-top:14px;font-size:15px;color:var(--ink-2);min-height:48px;text-align:left}
+
+/* scene ambience */
+@keyframes rain{from{stroke-dashoffset:0}to{stroke-dashoffset:-36}}
+.rain{stroke-dasharray:6 12;animation:rain .6s linear infinite}
+@keyframes steam{0%,100%{transform:translateY(0);opacity:.9}50%{transform:translateY(-8px);opacity:.4}}
+.steam{animation:steam 2.4s ease-in-out infinite}
+@keyframes tick{to{rotate:360deg}}
+.hand-m{animation:tick 6s linear infinite}
+@keyframes sunp{0%,100%{opacity:1}50%{opacity:.7}}
+.sun{animation:sunp 3s ease-in-out infinite}
+@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -6px}}
+.sguy{animation:bob 2.6s ease-in-out infinite}
+@keyframes wig{0%,100%{rotate:0deg}25%{rotate:-14deg}75%{rotate:14deg}}
+.sv:hover .sv-ic .ic,.sv.wig .sv-ic .ic{animation:wig .6s ease-in-out 2}
+.bubl{transform-box:fill-box;transform-origin:center}
+@media (min-width:900px){
+  .seat-stage{height:270px}
+  .bm{padding:22px 26px 26px}
+  .sya{grid-template-columns:1fr 1fr;gap:12px}
+}
+
 /* reveal fallback */
 .rv{transition:transform .8s cubic-bezier(.2,.8,.2,1)}
 html:not(.gs) .rv:not(.in){transform:translateY(26px)}
@@ -575,6 +663,13 @@ html:not(.gs) .rv:not(.in){transform:translateY(26px)}
 <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></symbol>
 <symbol id="i-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></symbol>
 <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-car" viewBox="0 0 24 24"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></symbol>
+<symbol id="i-pause" viewBox="0 0 24 24"><rect x="14" y="4" width="4" height="16" rx="1"/><rect x="6" y="4" width="4" height="16" rx="1"/></symbol>
+<symbol id="i-unlink" viewBox="0 0 24 24"><path d="m18.84 12.25 1.72-1.71h-.02a5.004 5.004 0 0 0-.12-7.07 5.006 5.006 0 0 0-6.95 0l-1.72 1.71"/><path d="m5.17 11.75-1.71 1.71a5.004 5.004 0 0 0 .12 7.07 5.006 5.006 0 0 0 6.95 0l1.71-1.71"/><line x1="8" x2="8" y1="2" y2="5"/><line x1="2" x2="5" y1="8" y2="8"/><line x1="16" x2="16" y1="19" y2="22"/><line x1="19" x2="22" y1="16" y2="16"/></symbol>
+<symbol id="i-link-2" viewBox="0 0 24 24"><path d="M9 17H7A5 5 0 0 1 7 7h2"/><path d="M15 7h2a5 5 0 1 1 0 10h-2"/><line x1="8" x2="16" y1="12" y2="12"/></symbol>
+<symbol id="i-arrow-right-left" viewBox="0 0 24 24"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></symbol>
+<symbol id="i-undo-2" viewBox="0 0 24 24"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11"/></symbol>
 
 </svg>
 
@@ -639,6 +734,8 @@ html:not(.gs) .rv:not(.in){transform:translateY(26px)}
   </div>
 </section>
 
+<div class="band" aria-hidden="true"><div class="track"><span>sich waschen</span><i>✦</i><span>sich freuen</span><i>✦</i><span>sich setzen</span><i>✦</i><span>sich beeilen</span><i>✦</i><span>sich erinnern</span><i>✦</i><span>sich vorstellen</span><i>✦</i><span>sich merken</span><i>✦</i><span>sich treffen</span><i>✦</i><span>sich waschen</span><i>✦</i><span>sich freuen</span><i>✦</i><span>sich setzen</span><i>✦</i><span>sich beeilen</span><i>✦</i><span>sich erinnern</span><i>✦</i><span>sich vorstellen</span><i>✦</i><span>sich merken</span><i>✦</i><span>sich treffen</span><i>✦</i></div></div>
+
 <!-- 3 STAGES -->
 <section class="sec" id="stages">
   <div class="wrap">
@@ -686,6 +783,36 @@ html:not(.gs) .rv:not(.in){transform:translateY(26px)}
         <div class="moral"><b>Что тут не так.</b> <span class="de" data-say="Ich stelle mich vor.">Ich stelle mich vor</span> это «представляюсь». <span class="de" data-say="Ich stelle mir das vor.">Ich stelle mir das vor</span> это «представляю себе». Я сказал: «хочу себе представить». Одна буква. Другой смысл.</div>
       </div>
     </article>
+  </div>
+</section>
+
+<!-- ARROW vs BOOMERANG -->
+<section class="sec" id="bm">
+  <div class="wrap">
+    <h2 class="h2">Стрела или <em>бумеранг</em></h2>
+    <p class="sub">Обычный глагол стреляет в кого-то другого. Возвратный возвращается к тебе. Переключай и смотри, куда летит капля.</p>
+    <div class="bm narrow rv">
+      <div class="tbl-sw" id="bmSw"><button type="button" data-m="0" aria-pressed="true">Ich wasche das Auto</button><button type="button" data-m="1" aria-pressed="false">Ich wasche mich</button></div>
+      <div class="bm-stage">
+        <svg viewBox="0 0 640 300" id="bmSvg" aria-hidden="true">
+          <rect width="640" height="300" rx="18" fill="#F5F7FA"/>
+          <rect y="268" width="640" height="32" fill="#e8edf3"/>
+          <use href="#guy" transform="translate(10 68)"/>
+          <g id="bmSpMe" opacity="0" fill="#2CB4FE"><path d="M60 60 l5 -12 l5 12 l12 5 l-12 5 l-5 12 l-5 -12 l-12 -5z"/><path d="M168 80 l3 -8 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3z"/><path d="M40 150 l3 -8 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3z"/></g>
+          <g id="bmCar" transform="translate(410 170)">
+            <path d="M10 70 q0 -26 26 -30 l34 -34 q10 -8 24 -8 h56 q14 0 22 10 l26 32 q30 4 30 30 v18 h-218z" fill="#2CB4FE"/>
+            <path d="M78 14 h50 q8 0 12 6 l18 22 h-102z" fill="#e6f6ff"/><path d="M128 14 v28" stroke="#2CB4FE" stroke-width="5"/>
+            <circle cx="56" cy="88" r="18" fill="#2D2929"/><circle cx="56" cy="88" r="7" fill="#DBDBDB"/><circle cx="178" cy="88" r="18" fill="#2D2929"/><circle cx="178" cy="88" r="7" fill="#DBDBDB"/>
+            <g id="bmMud" fill="#a1866a" opacity=".8"><circle cx="40" cy="58" r="8"/><circle cx="150" cy="62" r="6"/><circle cx="196" cy="52" r="7"/></g>
+          </g>
+          <g id="bmSpCar" opacity="0" fill="#2CB4FE"><path d="M470 140 l5 -12 l5 12 l12 5 l-12 5 l-5 12 l-5 -12 l-12 -5z"/><path d="M600 160 l3 -8 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3z"/><path d="M540 130 l3 -8 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3z"/></g>
+          <path id="bmP1" d="M160 170 C 260 50, 420 50, 515 205" fill="none" stroke="#2CB4FE" stroke-width="3" stroke-dasharray="7 9" stroke-linecap="round"/>
+          <path id="bmP2" d="M160 170 C 270 10, 440 40, 390 150 C 350 235, 230 235, 150 190" fill="none" stroke="#2D2929" stroke-width="3" stroke-dasharray="7 9" stroke-linecap="round" opacity="0"/>
+          <path id="bmBall" d="M0 -16 c-9 12 -12 17 -12 22 a12 12 0 0 0 24 0 c0 -5 -3 -10 -12 -22z" fill="url(#gWater)" stroke="#fff" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="bm-cap"><p class="bm-de" id="bmDe"></p><p class="bm-ru" id="bmRu"></p></div>
+    </div>
   </div>
 </section>
 
@@ -759,6 +886,16 @@ html:not(.gs) .rv:not(.in){transform:translateY(26px)}
   </div>
 </section>
 
+<!-- -ся vs sich -->
+<section class="sec soft" id="sya">
+  <div class="wrap">
+    <h2 class="h2">-ся и sich:<br><em>не близнецы</em></h2>
+    <p class="sub">Часто совпадают. Но не всегда. Смотри, где связь рвётся.</p>
+    <div class="sya narrow rv" id="syaBox"></div>
+    <div class="legend" style="margin-top:14px"><span><i></i>совпали</span><span><i style="background:var(--red)"></i>немец без sich</span><span><i style="background:var(--star)"></i>русский без -ся</span></div>
+  </div>
+</section>
+
 <!-- TABLE: only ich and du change -->
 <section class="sec soft" id="table">
   <div class="wrap">
@@ -773,6 +910,30 @@ html:not(.gs) .rv:not(.in){transform:translateY(26px)}
       <div class="prow"><span class="who2">ihr</span><span class="pp">euch</span><span class="ex2" data-a="Ihr wascht <b>euch</b>." data-d="Ihr wascht <b>euch</b> die Hände."></span></div>
       <div class="prow"><span class="who2">sie, Sie</span><span class="pp">sich</span><span class="ex2" data-a="Sie waschen <b>sich</b>." data-d="Sie waschen <b>sich</b> die Hände."></span></div>
       <p class="tbl-note" id="tblNote"></p>
+    </div>
+  </div>
+</section>
+
+<!-- SEATS: one Akkusativ seat -->
+<section class="sec" id="seats">
+  <div class="wrap">
+    <h2 class="h2">Одно кресло <em>для Akkusativ</em></h2>
+    <p class="sub">В предложении с sich одно место для Akkusativ. Кто первым сел, тот и Akkusativ. Остальным достаётся Dativ.</p>
+    <div class="seat-card narrow rv">
+      <p class="seat-sent" id="stSent"></p>
+      <div class="seat-stage" id="stStage">
+        <div class="seat-q"><span>очередь</span></div>
+        <div class="bench"><div class="seat a" id="seatA"><span>Akkusativ</span><small>кого? что?</small></div><div class="seat d" id="seatD"><span>Dativ</span><small>кому?</small></div></div>
+        <span class="tok me" id="tkMe"><i class="fc"></i><b id="tkMeT">ich</b></span>
+        <span class="tok obj" id="tkObj"><svg class="ic"><use href="#i-hand"/></svg><b>die Hände</b></span>
+      </div>
+      <p class="v2-cap" id="stCap"></p>
+      <div class="pager">
+        <button class="rb" id="stPrev" type="button" aria-label="Назад"><svg class="ic"><use href="#i-chevron-left"/></svg></button>
+        <span class="dotz" id="stDots"></span>
+        <button class="rb" id="stNext" type="button" aria-label="Дальше"><svg class="ic"><use href="#i-chevron-right"/></svg></button>
+        <button class="rb" id="stReplay" type="button" aria-label="Сначала"><svg class="ic"><use href="#i-repeat"/></svg></button>
+      </div>
     </div>
   </div>
 </section>
@@ -827,6 +988,19 @@ html:not(.gs) .rv:not(.in){transform:translateY(26px)}
   </div>
 </section>
 
+<!-- WORD ORDER -->
+<section class="sec soft" id="order">
+  <div class="wrap">
+    <h2 class="h2">Где сидит <em>sich</em></h2>
+    <p class="sub">Правило одно: сразу после спрягаемого глагола. А если глагол убежал в конец, sich его не ждёт.</p>
+    <div class="ord narrow rv">
+      <div class="tabs ord-tabs" id="ordTabs"></div>
+      <div class="ord-stage" id="ordStage"><span class="ord-dock">sich ищет место…</span><span class="ord-chip" id="ordChip">mich</span><div class="ord-row" id="ordRow"></div></div>
+      <div class="ord-cap"><button class="say" type="button" id="ordSay" aria-label="Слушать"><svg class="ic"><use href="#i-volume-2"/></svg></button><span id="ordCap"></span></div>
+    </div>
+  </div>
+</section>
+
 <!-- DAY: tabs + hotspots -->
 <section class="sec" id="day">
   <div class="wrap">
@@ -853,6 +1027,7 @@ html:not(.gs) .rv:not(.in){transform:translateY(26px)}
         <path d="M380 120 l30 -30 M380 160 l60 -60" stroke="#fff" stroke-width="8" opacity=".6"/>
         <rect x="300" y="300" width="240" height="22" rx="8" fill="#fff" stroke="#dfe5ec" stroke-width="3"/>
         <rect x="310" y="322" width="220" height="178" rx="6" fill="#d9c3a2"/>
+        <g class="sguy"><use href="#guy" transform="translate(232 352) scale(.6)"/></g>
         <path d="M420 300 v-22 h28 v8 h-14 v14z" fill="#c9d1da"/>
         <rect x="490" y="262" width="22" height="38" rx="5" fill="#2CB4FE"/><path d="M496 262 l4 -26 M506 262 l2 -22" stroke="#2D2929" stroke-width="3"/>
         <!-- towel -->
@@ -863,13 +1038,14 @@ html:not(.gs) .rv:not(.in){transform:translateY(26px)}
         <rect width="800" height="600" fill="url(#gW)"/>
         <rect y="500" width="800" height="100" fill="url(#gFloor)"/>
         <rect x="300" y="70" width="190" height="170" rx="6" fill="#bfe7ff" stroke="#fff" stroke-width="10"/><path d="M395 70 v170 M300 155 h190" stroke="#fff" stroke-width="6"/>
-        <circle cx="440" cy="110" r="22" fill="#ffd25c"/>
+        <circle class="sun" cx="440" cy="110" r="22" fill="#ffd25c"/>
         <rect x="40" y="120" width="200" height="380" rx="8" fill="#eef1f5" stroke="#d6dde5" stroke-width="3"/><path d="M140 120 v380" stroke="#d6dde5" stroke-width="3"/><circle cx="128" cy="310" r="5" fill="#9aa5b1"/><circle cx="152" cy="310" r="5" fill="#9aa5b1"/>
         <path d="M60 180 h60 v90 h-60z" fill="#2CB4FE" opacity=".8"/>
         <rect x="430" y="330" width="330" height="120" rx="14" fill="#fff" stroke="#dfe5ec" stroke-width="3"/>
         <rect x="440" y="300" width="90" height="50" rx="14" fill="#e6f6ff"/><rect x="530" y="340" width="230" height="110" rx="10" fill="#2CB4FE" opacity=".85"/>
         <rect x="420" y="250" width="20" height="250" rx="6" fill="#d9c3a2"/>
-        <rect x="300" y="380" width="90" height="120" rx="6" fill="#d9c3a2"/><circle cx="345" cy="352" r="26" fill="#fff" stroke="#2D2929" stroke-width="4"/><path d="M345 338 v14 l10 6" stroke="#2D2929" stroke-width="3" fill="none"/>
+        <rect x="300" y="380" width="90" height="120" rx="6" fill="#d9c3a2"/><circle cx="345" cy="352" r="26" fill="#fff" stroke="#2D2929" stroke-width="4"/><path class="hand-m" d="M345 352 v-14" stroke="#2D2929" stroke-width="3" fill="none" style="transform-origin:345px 352px"/><path d="M345 352 l10 6" stroke="#2D2929" stroke-width="3" fill="none"/>
+        <g class="sguy"><use href="#guy" transform="translate(200 335) scale(.72)"/></g>
         <path d="M250 520 q10 -30 30 -20 l6 26 h-34z M290 528 q10 -30 30 -20 l6 26 h-34z" fill="#2D2929"/>
       </svg>
       <svg class="bg" data-s="kue" viewBox="0 0 800 600" aria-hidden="true" style="display:none">
@@ -879,6 +1055,7 @@ html:not(.gs) .rv:not(.in){transform:translateY(26px)}
         <rect x="560" y="300" width="220" height="200" fill="#eef1f5" stroke="#d6dde5" stroke-width="3"/><rect x="550" y="290" width="240" height="14" rx="4" fill="#d9c3a2"/>
         <rect x="620" y="210" width="70" height="80" rx="10" fill="#2D2929"/><rect x="636" y="250" width="38" height="40" rx="4" fill="#4a4646"/><path d="M640 280 h30 v10 h-30z" fill="#fff"/>
         <path class="steam" d="M650 200 q-8 -14 0 -28 q8 -14 0 -28" fill="none" stroke="#9aa5b1" stroke-width="3"/>
+        <g class="sguy"><use href="#guy" transform="translate(330 250) scale(.72)"/></g>
         <rect x="280" y="380" width="250" height="16" rx="6" fill="#d9c3a2"/><path d="M300 396 v104 M510 396 v104" stroke="#c6a983" stroke-width="10"/>
         <ellipse cx="400" cy="378" rx="44" ry="8" fill="#fff" stroke="#dfe5ec" stroke-width="3"/><circle cx="388" cy="370" r="10" fill="#ffd25c"/><rect x="440" y="350" width="24" height="28" rx="4" fill="#2CB4FE"/>
         <path d="M220 320 h60 v100 h-60z M226 420 v80 M274 420 v80" fill="#2CB4FE" stroke="#2CB4FE" stroke-width="8"/>
@@ -888,11 +1065,12 @@ html:not(.gs) .rv:not(.in){transform:translateY(26px)}
         <rect width="800" height="600" fill="url(#gW)"/>
         <rect y="500" width="800" height="100" fill="url(#gFloor)"/>
         <rect x="500" y="100" width="190" height="400" rx="6" fill="#2D2929"/><rect x="514" y="114" width="162" height="386" rx="4" fill="#4a4646"/><circle cx="650" cy="320" r="9" fill="#d9c3a2"/>
-        <circle cx="595" cy="60" r="30" fill="#fff" stroke="#2D2929" stroke-width="4"/><path d="M595 44 v16 l12 8" stroke="#2D2929" stroke-width="3" fill="none"/>
+        <circle cx="595" cy="60" r="30" fill="#fff" stroke="#2D2929" stroke-width="4"/><path class="hand-m" d="M595 60 v-16" stroke="#2D2929" stroke-width="3" fill="none" style="transform-origin:595px 60px"/><path d="M595 60 l12 8" stroke="#2D2929" stroke-width="3" fill="none"/>
         <rect x="80" y="120" width="260" height="12" rx="6" fill="#c6a983"/><circle cx="120" cy="140" r="7" fill="#9aa5b1"/><circle cx="210" cy="140" r="7" fill="#9aa5b1"/><circle cx="300" cy="140" r="7" fill="#9aa5b1"/>
         <path d="M180 146 l-50 30 l-6 170 h120 l-6 -170z" fill="#2CB4FE"/><path d="M210 146 v200" stroke="#1499e6" stroke-width="4"/>
         <path d="M280 146 q20 40 0 120" stroke="#2D2929" stroke-width="16" fill="none" stroke-linecap="round"/>
         <rect x="380" y="150" width="80" height="120" rx="40" fill="url(#gMir)" stroke="#dfe5ec" stroke-width="6"/>
+        <g class="sguy"><use href="#guy" transform="translate(300 330) scale(.72)"/></g>
         <path d="M120 520 q14 -34 40 -22 l8 28 h-48z M180 528 q14 -34 40 -22 l8 28 h-48z" fill="#2D2929"/>
         <rect x="360" y="440" width="120" height="60" rx="6" fill="#d9c3a2"/><path d="M396 432 l10 -10 l14 14" stroke="#2D2929" stroke-width="4" fill="none"/>
       </svg>
@@ -1491,6 +1669,184 @@ function sichInit(){
     $$('#lkChips button').forEach(function(b){ b.onclick = function(){ inp.value = b.textContent; find(); }; });
     show(V[1]);
   })();
+
+  /* ---------- marquee band ---------- */
+  (function(){
+    var tr = $('.band .track'); if(!tr || !ANIM) return;
+    var loop = G.fromTo(tr, {xPercent:0}, {xPercent:-50, duration:30, ease:'none', repeat:-1});
+    ScrollTrigger.create({trigger:'.band', start:'top bottom', end:'bottom top', onUpdate:function(self){
+      var v = self.getVelocity();
+      G.to(loop, {timeScale:1 + Math.min(Math.abs(v)/250, 6), duration:.2, overwrite:true});
+      G.to(loop, {timeScale:1, duration:1.2, delay:.25, overwrite:false});
+      G.to('.band', {skewX:G.utils.clamp(-8, 8, v/-300), duration:.4, overwrite:true});
+    }});
+  })();
+
+  /* ---------- arrow vs boomerang ---------- */
+  (function(){
+    var sw = $$('#bmSw button'), ball = $('#bmBall'), p1 = $('#bmP1'), p2 = $('#bmP2'), de = $('#bmDe'), ru = $('#bmRu'), spC = $('#bmSpCar'), spM = $('#bmSpMe'), mud = $('#bmMud'), guy = $('#bmSvg use');
+    var T = [['Ich wasche <b>das Auto</b>.', 'Я мою машину. Действие ушло от меня в машину. Как стрела. sich не нужен.', 'Ich wasche das Auto.'],
+             ['Ich wasche <b>mich</b>.', 'Я моюсь. Действие вернулось ко мне. Как бумеранг. Это и есть sich.', 'Ich wasche mich.']];
+    var m = 0, t = null, touched = false, tl = null;
+    function endOf(p){ var L = p.getTotalLength(), pt = p.getPointAtLength(L); return pt; }
+    function set(k, user){
+      m = k;
+      sw.forEach(function(b){ b.setAttribute('aria-pressed', +b.dataset.m === k); });
+      de.innerHTML = T[k][0]; ru.textContent = T[k][1];
+      p1.style.opacity = k ? 0 : 1; p2.style.opacity = k ? 1 : 0;
+      if(user) say(T[k][2]);
+      if(tl) tl.kill();
+      if(!ANIM || !window.MotionPathPlugin){
+        var e = endOf(k ? p2 : p1); ball.setAttribute('transform', 'translate(' + e.x + ' ' + e.y + ')');
+        spC.setAttribute('opacity', k ? 0 : 1); spM.setAttribute('opacity', k ? 1 : 0); mud.setAttribute('opacity', k ? .8 : 0); return;
+      }
+      G.set([spC, spM], {opacity:0}); G.set(mud, {opacity:.8}); G.set(guy, {y:0});
+      var path = k ? p2 : p1, sp = k ? spM : spC;
+      tl = G.timeline();
+      tl.set(ball, {opacity:1})
+        .fromTo(path, {strokeDashoffset:120}, {strokeDashoffset:0, duration:1.4, ease:'none'}, 0)
+        .to(ball, {motionPath:{path:path, align:path, alignOrigin:[.5,.5]}, duration:k ? 1.7 : 1.2, ease:'power1.inOut'}, 0)
+        .to(sp, {opacity:1, duration:.15})
+        .fromTo(sp, {scale:.3, svgOrigin:k ? '100 110' : '530 150'}, {scale:1, duration:.7, ease:'back.out(3)'}, '<')
+        .to(ball, {opacity:0, duration:.2}, '<');
+      if(k) tl.to(guy, {y:-10, duration:.18, yoyo:true, repeat:1, ease:'power1.out'}, '<');
+      else tl.to(mud, {opacity:0, duration:.5}, '<');
+    }
+    sw.forEach(function(b){ b.onclick = function(){ touched = true; clearInterval(t); set(+b.dataset.m, true); }; });
+    set(0);
+    if(!reduce) whenVisible($('#bmSvg'), function(){ if(touched || t) return; set(m); t = setInterval(function(){ if(touched){ clearInterval(t); return; } set(m ? 0 : 1); }, 3800); }, function(){ clearInterval(t); t = null; }, .4);
+  })();
+
+  /* ---------- -ся vs sich ---------- */
+  (function(){
+    var R = [['мы','ться',1,'мыть себя','waschen'],['радова','ться',1,'','freuen'],['торопи','ться',1,'','beeilen'],
+             ['учи','ться',0,'','lernen'],['смея','ться',0,'','lachen'],['остава','ться',0,'','bleiben'],
+             ['помнить','',2,'','erinnern'],['отдыхать','',2,'','erholen']];
+    var mk = ['✗','✓','!'];
+    var box = $('#syaBox');
+    box.innerHTML = R.map(function(r){
+      var ru = r[1] ? r[0] + '<b>' + r[1] + '</b>' : r[0];
+      var dz = r[2] ? '<b>sich</b> ' + r[4] : r[4];
+      var note = r[2] === 1 ? 'совпали' : r[2] === 0 ? 'в немецком без sich' : 'в русском без -ся';
+      return '<div class="sy k' + r[2] + '"><span class="ru">' + ru + '</span><svg viewBox="0 0 64 24" aria-hidden="true"><line class="l1" x1="2" y1="14" x2="32" y2="14"/><line class="l2" x1="32" y1="14" x2="62" y2="14"/><text class="mk" x="32" y="6" text-anchor="middle" fill="currentColor">' + mk[r[2]] + '</text></svg><span class="dz">' + dz + '<small>' + note + '</small></span></div>';
+    }).join('');
+    var rows = $$('.sy', box);
+    rows.forEach(function(r){ r.style.color = r.classList.contains('k1') ? 'var(--blue)' : r.classList.contains('k0') ? 'var(--red)' : 'var(--star)'; $$('.ru, .dz', r).forEach(function(x){ x.style.color = 'var(--ink)'; }); });
+    function breakIt(r, anim){
+      if(!r.classList.contains('k0')) return;
+      var a = $('.l1', r), b = $('.l2', r);
+      if(anim){ G.to(a, {x:-6, rotation:-14, svgOrigin:'32 14', duration:.5, ease:'back.out(3)'}); G.to(b, {x:6, rotation:14, svgOrigin:'32 14', duration:.5, ease:'back.out(3)'}); }
+      else { a.setAttribute('x2', 26); b.setAttribute('x1', 38); }
+    }
+    if(!ANIM){ rows.forEach(function(r){ breakIt(r, false); }); return; }
+    rows.forEach(function(r){ G.set($$('line', r), {strokeDasharray:30, strokeDashoffset:30}); G.set($('.mk', r), {scale:0, svgOrigin:'32 4'}); });
+    ScrollTrigger.create({trigger:box, start:'top 80%', once:true, onEnter:function(){
+      rows.forEach(function(r, i){
+        G.timeline({delay:i*.22})
+          .from(r, {x:-14, duration:.4, ease:'power2.out'})
+          .to($('.l1', r), {strokeDashoffset:0, duration:.25, ease:'none'}, '-=.1')
+          .to($('.l2', r), {strokeDashoffset:0, duration:.25, ease:'none'})
+          .add(function(){ breakIt(r, true); })
+          .to($('.mk', r), {scale:1, duration:.5, ease:'back.out(3)'});
+      });
+    }});
+  })();
+
+  /* ---------- seats: one Akkusativ seat ---------- */
+  (function(){
+    var stage = $('#stStage'), me = $('#tkMe'), obj = $('#tkObj'), lab = $('#tkMeT'), sent = $('#stSent'), cap = $('#stCap'), dots = $('#stDots');
+    var S = [
+      {me:'q0', obj:'q1', l:'ich', s:'Ich wasche <u>&nbsp;___&nbsp;</u>.', c:'<b>Шаг 1.</b> Глагол waschen. В нём одно кресло Akkusativ: кого? что? моют.'},
+      {me:'A', obj:'q1', l:'mich', s:'Ich wasche <b>mich</b>.', c:'<b>Шаг 2.</b> Мою кого? Себя. Кресло свободно, я сажусь. Это <b>mich</b>.'},
+      {me:'D', obj:'A', l:'mir', s:'Ich wasche <b>mir</b> <u>die Hände</u>.', c:'<b>Шаг 3.</b> Пришли руки. Мою что? Руки. Кресло Akkusativ теперь их. Я пересаживаюсь в Dativ: кому мою? Себе. <b>mir</b>.'},
+      {me:'D', obj:'A', l:'dir', s:'Du wäschst <b>dir</b> <u>die Hände</u>.', c:'<b>Шаг 4.</b> С du то же самое: dich становится <b>dir</b>.'},
+      {me:'D', obj:'A', l:'sich', s:'Er wäscht <b>sich</b> <u>die Hände</u>.', c:'<b>Шаг 5.</b> А er, sie, es, Sie: <b>sich</b> в любом кресле. Им пересаживаться не надо.'}
+    ];
+    var cur = -1, auto = null, played = false;
+    dots.innerHTML = S.map(function(){ return '<i></i>'; }).join('');
+    function pos(tok, where){
+      var st = stage.getBoundingClientRect(), w = tok.offsetWidth, h = tok.offsetHeight;
+      if(where === 'q0') return {x:22, y:24};
+      if(where === 'q1') return {x:Math.max(st.width - w - 22, 140), y:24};
+      var seat = $(where === 'A' ? '#seatA' : '#seatD').getBoundingClientRect();
+      return {x:seat.left - st.left + seat.width/2 - w/2, y:seat.top - st.top + 18 - h/2 + 10};
+    }
+    function move(tok, where, delay){
+      var p = pos(tok, where);
+      if(!ANIM){ tok.style.transform = 'translate(' + p.x + 'px,' + p.y + 'px)'; return; }
+      var x0 = G.getProperty(tok, 'x'), y0 = G.getProperty(tok, 'y');
+      if(Math.abs(x0 - p.x) < 1 && Math.abs(y0 - p.y) < 1) return;
+      if(window.MotionPathPlugin) G.to(tok, {motionPath:{path:[{x:x0, y:y0}, {x:(x0 + p.x)/2, y:Math.min(y0, p.y) - 40}, {x:p.x, y:p.y}], curviness:1.3}, duration:.9, delay:delay||0, ease:'power2.inOut',
+        onComplete:function(){ G.fromTo(tok, {scaleY:.8, scaleX:1.12}, {scaleY:1, scaleX:1, duration:.5, ease:'elastic.out(1,.4)'}); }});
+      else G.to(tok, {x:p.x, y:p.y, duration:.8, delay:delay||0, ease:'power2.inOut'});
+    }
+    function render(n, instant){
+      n = Math.max(0, Math.min(S.length - 1, n));
+      var s = S[n], changed = lab.textContent !== s.l;
+      cur = n;
+      lab.textContent = s.l; sent.innerHTML = s.s; cap.innerHTML = s.c;
+      $$('i', dots).forEach(function(d, i){ d.classList.toggle('on', i === n); });
+      obj.style.opacity = s.obj === 'q1' && n === 0 ? .55 : 1;
+      if(instant && ANIM){ var a = pos(me, s.me), b = pos(obj, s.obj); G.set(me, {x:a.x, y:a.y}); G.set(obj, {x:b.x, y:b.y}); return; }
+      move(obj, s.obj, 0);
+      move(me, s.me, s.obj === 'A' && s.me === 'D' ? .2 : 0);
+      if(ANIM && changed) G.fromTo(lab, {scale:1.8, rotation:-12}, {scale:1, rotation:0, duration:.7, ease:'elastic.out(1,.45)', delay:.5});
+      if(ANIM) G.fromTo(cap, {x:12}, {x:0, duration:.4, ease:'power2.out'});
+    }
+    function play(){ clearInterval(auto); render(0); auto = setInterval(function(){ if(cur >= S.length - 1){ clearInterval(auto); return; } render(cur + 1); }, 3000); }
+    $('#stNext').onclick = function(){ clearInterval(auto); render(cur + 1); say(sent.textContent.replace(/\s+/g,' ').trim()); };
+    $('#stPrev').onclick = function(){ clearInterval(auto); render(cur - 1); };
+    $('#stReplay').onclick = play;
+    render(2, true);
+    window.addEventListener('resize', function(){ render(cur, true); });
+    if(document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ render(cur, true); });
+    if(!reduce) whenVisible(stage, function(){ if(!played){ played = true; play(); } }, null, .5);
+  })();
+
+  /* ---------- word order: where sich sits ---------- */
+  (function(){
+    var O = [
+      {k:'Präsens', w:['Ich','freue:v','_','auf den Urlaub.'], c:'mich', t:'Глагол freue на втором месте. mich садится сразу за ним.', de:'Ich freue mich auf den Urlaub.'},
+      {k:'Вопрос', w:['Freust:v','du','_','auf den Urlaub?'], c:'dich', t:'Глагол прыгнул вперёд, за ним du. dich сразу за ними. Местоимения держатся вместе.', de:'Freust du dich auf den Urlaub?'},
+      {k:'Perfekt', w:['Ich','habe:v','_','auf den Urlaub','gefreut.:p'], c:'mich', t:'Спрягается habe. mich сразу за ним. gefreut уехал в конец.', de:'Ich habe mich auf den Urlaub gefreut.'},
+      {k:'müssen', w:['Ich','muss:v','_','schnell','beeilen.:p'], c:'mich', t:'Спрягается muss. mich сразу за ним. beeilen ждёт в конце.', de:'Ich muss mich schnell beeilen.'},
+      {k:'weil …', w:['…, weil','ich','_','beeilen:p','muss.:v'], c:'mich', t:'Глагол muss убежал в конец. А mich его не ждёт: стоит впереди, сразу после ich.', de:'weil ich mich beeilen muss.'}
+    ];
+    var tabs = $('#ordTabs'), row = $('#ordRow'), chip = $('#ordChip'), stage = $('#ordStage'), capEl = $('#ordCap'), sayB = $('#ordSay'), i = 0, t = null, touched = false;
+    tabs.innerHTML = O.map(function(o, k){ return '<button type="button" data-k="' + k + '" aria-pressed="' + (k === 0) + '">' + o.k + '</button>'; }).join('');
+    function slotPos(){
+      var sl = $('.slot', row), st = stage.getBoundingClientRect(), r = sl.getBoundingClientRect();
+      return {x:r.left - st.left + (r.width - chip.offsetWidth)/2, y:r.top - st.top + (r.height - chip.offsetHeight)/2};
+    }
+    function show(k, anim){
+      i = k; var o = O[k];
+      $$('button', tabs).forEach(function(b){ b.setAttribute('aria-pressed', +b.dataset.k === k); });
+      chip.textContent = o.c;
+      row.innerHTML = o.w.map(function(w){
+        if(w === '_') return '<span class="ow slot"></span>';
+        var p = w.split(':'), cls = p[1] === 'v' ? ' v' : p[1] === 'p' ? ' p' : '';
+        return '<span class="ow' + cls + '">' + esc(p[0]) + '</span>';
+      }).join('');
+      var sl = $('.slot', row); sl.style.width = chip.offsetWidth + 'px'; sl.style.height = chip.offsetHeight + 'px';
+      capEl.textContent = o.t; sayB.dataset.say = o.de;
+      var p = slotPos();
+      if(!ANIM || !anim){ if(G) G.set(chip, {x:p.x, y:p.y}); else chip.style.transform = 'translate(' + p.x + 'px,' + p.y + 'px)'; return; }
+      G.from($$('.ow', row), {y:14, duration:.4, ease:'back.out(2)', stagger:.05});
+      G.from($$('.ow.v', row), {scale:1.25, duration:.6, ease:'elastic.out(1,.45)', delay:.3});
+      var s0 = {x:110, y:8};
+      G.set(chip, {x:s0.x, y:s0.y, rotation:-8});
+      G.to(chip, {motionPath:{path:[s0, {x:(s0.x + p.x)/2, y:Math.min(s0.y, p.y) - 30}, {x:p.x, y:p.y}], curviness:1.3}, rotation:0, duration:1, delay:.5, ease:'power2.inOut',
+        onComplete:function(){ G.fromTo(chip, {scale:1.25}, {scale:1, duration:.5, ease:'elastic.out(1,.45)'}); }});
+    }
+    $$('button', tabs).forEach(function(b){ b.onclick = function(){ touched = true; clearInterval(t); show(+b.dataset.k, true); }; });
+    show(0, false);
+    window.addEventListener('resize', function(){ show(i, false); });
+    if(document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ show(i, false); });
+    if(!reduce) whenVisible(stage, function(){ if(touched || t) return; show(i, true); t = setInterval(function(){ if(touched){ clearInterval(t); return; } show((i + 1) % O.length, true); }, 3800); }, function(){ clearInterval(t); t = null; }, .5);
+  })();
+
+  /* ---------- service icons wiggle on reveal ---------- */
+  if(ANIM) ScrollTrigger.batch('.sv', {start:'top 85%', once:true, onEnter:function(b){ b.forEach(function(c, k){ setTimeout(function(){ c.classList.add('wig'); setTimeout(function(){ c.classList.remove('wig'); }, 1400); }, k*150); }); }});
 
   /* ---------- reveals ---------- */
   if(ANIM){
